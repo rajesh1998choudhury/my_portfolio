@@ -4,10 +4,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Your EmailJS Configuration
     const EMAILJS_CONFIG = {
-        serviceId: "service_y4pgp63",
+        serviceId: "service_gp53yrq",
         templateId: "template_dsc32br", 
         apiKey: "ZJ0MFyP47TTtS5VDb",
-        toEmail: "rajeshchoudhury199716@gmail.com"
+        toEmail: "rajeshchoudhury098@gmail.com"
     };
     
     let emailServiceInitialized = false;
@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             try {
                 // Prepare template parameters
                 const templateParams = {
+                    to_email: EMAILJS_CONFIG.toEmail,
                     name: name,           // Auto-reply uses {name}
                     title: subject,       // Auto-reply uses {title}
                     from_name: name,
@@ -85,6 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 };
                 
+                console.log('Sending email to:', EMAILJS_CONFIG.toEmail);
                 console.log('Sending email with params:', templateParams);
                 
                 // Send email
