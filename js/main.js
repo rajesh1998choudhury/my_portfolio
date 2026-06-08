@@ -3,9 +3,14 @@
 // Loading Screen
 window.addEventListener('load', function() {
     const loadingScreen = document.querySelector('.loading-screen');
-    setTimeout(() => {
-        loadingScreen.classList.add('hidden');
-    }, 2000);
+//     setTimeout(() => {
+//         loadingScreen.classList.add('hidden');
+//     }, 2000);
+ if (loadingScreen) {  // ⭐ Added this null check
+        setTimeout(() => {
+            loadingScreen.classList.add('hidden');
+        }, 2000);
+    }
 });
 
 // Mobile Navigation Toggle
